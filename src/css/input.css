@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@font-face {
+  font-family: shin;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  
+  src: url("fonts/shin.ttf") format("truetype");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("fonts/Estedad-SemiBold.woff2") format("woff");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Estedad-Black.woff2") format("woff");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+ src: url("fonts/Estedad-Bold.woff2") format("woff");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: bolder;
+  font-display: swap;
+  src: url("fonts/Estedad-ExtraBold.woff2") format("woff");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/Estedad-Medium.woff2") format("woff");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("fonts/Estedad-Regular.woff2") format("woff");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("fonts/Estedad-Thin.woff2") format("woff");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("fonts/Estedad-Light.woff2") format("woff");
+}
+@font-face {
+  font-family: Estedad;
+  font-style: normal;
+  font-weight: lighter;
+  font-display: swap;
+  src: url("fonts/Estedad-ExtraLight.woff2") format("woff");
+}
+@font-face {
+  font-family: DastNevis;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("fonts/DastNevis.otf") format("opentype");
+}
+@font-face {
+  font-family: Yekan;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("fonts/BYekan.ttf") format("truetype");
+}
+@font-face {
+  font-family: Yekan;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("fonts/BYekanBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: sina;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("fonts/BSina.ttf") format("truetype");
+}
+@font-face {
+  font-family: NAZANIN;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("fonts/B-NAZANIN.TTF") format("truetype");
+}
+@layer components {
+  .base {
+    font-family: var(--font-shin);
+    word-spacing: 0.1rem;
+    text-align: justify;
+  }
+}
+@theme {
+  --font-shin            : "shin"; 
+  --font-estedad         : "Estedad"; 
+  --font-dastNevis       : "DastNevis"; 
+  --font-yekan           : "Yekan"; 
+  --font-sina            : "sina"; 
+  --font-nazanin         : "NAZANIN"; 
+  --text-h1              :  3rem;
+  --text-h1--line-height :  3rem;
+  --text-h1--font-weight :  bold;
+  --text-h1--word-spacing:  5rem;
+}
