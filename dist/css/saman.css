@@ -405,6 +405,9 @@
   .text-\[1rem\] {
     font-size: 1rem;
   }
+  .text-\[2rem\] {
+    font-size: 2rem;
+  }
   .leading-3 {
     --tw-leading: calc(var(--spacing) * 3);
     line-height: calc(var(--spacing) * 3);
@@ -427,6 +430,15 @@
   }
   .text-\[0\.rem\] {
     color: 0.rem;
+  }
+  .text-\[1\] {
+    color: 1;
+  }
+  .text-\[1re\] {
+    color: 1re;
+  }
+  .text-\[2\] {
+    color: 2;
   }
   .text-black {
     color: var(--color-black);
