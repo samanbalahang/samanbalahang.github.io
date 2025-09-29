@@ -208,6 +208,12 @@
   .table {
     display: table;
   }
+  .aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
+  }
+  .aspect-\[4\/4\] {
+    aspect-ratio: 4/4;
+  }
   .h-53 {
     height: calc(var(--spacing) * 53);
   }
@@ -235,6 +241,18 @@
   .h-\[22px\] {
     height: 22px;
   }
+  .h-\[22vh\] {
+    height: 22vh;
+  }
+  .h-\[75vh\] {
+    height: 75vh;
+  }
+  .h-\[85vh\] {
+    height: 85vh;
+  }
+  .h-\[100vh\] {
+    height: 100vh;
+  }
   .h-\[103\] {
     height: 103;
   }
@@ -244,6 +262,9 @@
   .h-\[220px\] {
     height: 220px;
   }
+  .h-\[220vh\] {
+    height: 220vh;
+  }
   .h-\[225px\] {
     height: 225px;
   }
@@ -252,6 +273,9 @@
   }
   .h-\[230px\] {
     height: 230px;
+  }
+  .h-\[vh\] {
+    height: vh;
   }
   .h-auto {
     height: auto;
