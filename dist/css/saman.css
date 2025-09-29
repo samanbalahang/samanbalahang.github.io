@@ -214,6 +214,9 @@
   .h-103 {
     height: calc(var(--spacing) * 103);
   }
+  .h-\[2\] {
+    height: 2;
+  }
   .h-\[10\] {
     height: 10;
   }
@@ -229,8 +232,26 @@
   .h-\[15rem\] {
     height: 15rem;
   }
+  .h-\[22px\] {
+    height: 22px;
+  }
   .h-\[103\] {
     height: 103;
+  }
+  .h-\[130px\] {
+    height: 130px;
+  }
+  .h-\[220px\] {
+    height: 220px;
+  }
+  .h-\[225px\] {
+    height: 225px;
+  }
+  .h-\[230\] {
+    height: 230;
+  }
+  .h-\[230px\] {
+    height: 230px;
   }
   .h-auto {
     height: auto;
