@@ -351,6 +351,9 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -402,11 +405,23 @@
   .text-\[0\.8rem\] {
     font-size: 0.8rem;
   }
+  .text-\[1\.2rem\] {
+    font-size: 1.2rem;
+  }
+  .text-\[1\.6rem\] {
+    font-size: 1.6rem;
+  }
+  .text-\[1\.8rem\] {
+    font-size: 1.8rem;
+  }
   .text-\[1rem\] {
     font-size: 1rem;
   }
   .text-\[2rem\] {
     font-size: 2rem;
+  }
+  .text-\[3rem\] {
+    font-size: 3rem;
   }
   .leading-3 {
     --tw-leading: calc(var(--spacing) * 3);
@@ -420,9 +435,17 @@
     --tw-leading: calc(var(--spacing) * 5);
     line-height: calc(var(--spacing) * 5);
   }
+  .leading-6 {
+    --tw-leading: calc(var(--spacing) * 6);
+    line-height: calc(var(--spacing) * 6);
+  }
   .leading-7 {
     --tw-leading: calc(var(--spacing) * 7);
     line-height: calc(var(--spacing) * 7);
+  }
+  .leading-10 {
+    --tw-leading: calc(var(--spacing) * 10);
+    line-height: calc(var(--spacing) * 10);
   }
   .tracking-widest {
     --tw-tracking: var(--tracking-widest);
@@ -430,6 +453,9 @@
   }
   .text-\[0\.rem\] {
     color: 0.rem;
+  }
+  .text-\[1\.rem\] {
+    color: 1.rem;
   }
   .text-\[1\] {
     color: 1;
@@ -439,6 +465,9 @@
   }
   .text-\[2\] {
     color: 2;
+  }
+  .text-\[rem\] {
+    color: rem;
   }
   .text-black {
     color: var(--color-black);
