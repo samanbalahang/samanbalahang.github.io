@@ -61,11 +61,17 @@ Feel free to reach out!
 
 Let's Connect!
 📧 Email: saman.balahang.2012@gmail.com
+
 📱 Phone: 0098 922 419 4485
+
 💬 WhatsApp:  +98 922 419 4485
+
 📲 Telegram: @Sambaltel
+
 💼 LinkedIn: [linkedin.com/in/yourprofile](https://ir.linkedin.com/in/sambal-ln-0a5195138?trk=public_post_feed-actor-name&original_referer=https%3A%2F%2Fwww.linkedin.com%2F)
+
 🐙 GitHub: [github.com/yourusername](https://github.com/samanbalahang)
+
 📚 aparat: [yourportfolio.com](https://www.aparat.com/samanbalahang)
 
 
