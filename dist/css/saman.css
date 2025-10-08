@@ -24,6 +24,7 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --tracking-widest: 0.1em;
     --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
     --blur-lg: 16px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -264,9 +265,6 @@
   .inline-block {
     display: inline-block;
   }
-  .table {
-    display: table;
-  }
   .aspect-\[4\/4\] {
     aspect-ratio: 4/4;
   }
@@ -278,9 +276,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .rotate-y-180 {
     --tw-rotate-y: rotateY(180deg);
@@ -310,11 +305,11 @@
   .overflow-hidden {
     overflow: hidden;
   }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
   .rounded-lg {
     border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -322,9 +317,6 @@
   }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-gray-600 {
-    background-color: var(--color-gray-600);
   }
   .bg-gray-600\/50 {
     background-color: color-mix(in srgb, oklch(44.6% 0.03 256.802) 50%, transparent);
@@ -338,9 +330,6 @@
   .bg-transparent {
     background-color: transparent;
   }
-  .bg-white {
-    background-color: var(--color-white);
-  }
   .bg-white\/15 {
     background-color: color-mix(in srgb, #fff 15%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -350,8 +339,8 @@
   .bg-\[url\(\'\.\.\/images\/original-black-leather\.jpg\'\)\] {
     background-image: url('../images/original-black-leather.jpg');
   }
-  .bg-cover {
-    background-size: cover;
+  .bg-repeat {
+    background-repeat: repeat;
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -444,15 +433,8 @@
   .text-yellow-500 {
     color: var(--color-yellow-500);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-0 {
     opacity: 0%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .backdrop-blur-lg {
     --tw-backdrop-blur: blur(var(--blur-lg));
@@ -651,11 +633,6 @@ img {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false;
@@ -707,7 +684,6 @@ img {
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
