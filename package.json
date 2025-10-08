@@ -20,6 +20,7 @@
   "homepage": "https://github.com/samanbalahang/samanbalahang.github.io#readme",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.13",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.13",
+    "vanilla-tilt": "^1.8.1"
   }
 }

@@ -111,6 +111,10 @@
     word-spacing: 0.1rem;
     text-align: justify;
   }
+  .eng{
+    font-family: var(--font-yekan);
+    word-spacing: 1rem;
+  }
 }
 @theme {
   --font-shin            : "shin"; 
@@ -123,4 +127,8 @@
   --text-h1--line-height :  3rem;
   --text-h1--font-weight :  bold;
   --text-h1--word-spacing:  5rem;
+}
+img{
+    transform-style: preserve-3d;
+    transform: perspective(1000px); /* Creates the 3D space */
 }
