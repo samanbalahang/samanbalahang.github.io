@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saman Balahang | Full Stack Developer</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<style>
+.project-card{
+transition:.4s;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 40px rgba(59,130,246,.35);
+}
+
+.filter-btn.active{
+background:#3b82f6;
+color:white;
+}
+</style>
+</head>
+
+<body class="bg-slate-950 text-white">
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center">
+<div class="container mx-auto px-6">
+
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+
+<div>
+
+<h1 class="text-6xl font-bold mb-5">
+Saman Balahang
+</h1>
+
+<h2 class="text-2xl text-blue-400 mb-6">
+Full Stack Developer
+</h2>
+
+<p class="text-slate-300 mb-8">
+Python • Django • Laravel • Next.js • WordPress • Trading Bots
+</p>
+
+<div class="flex gap-4 flex-wrap">
+<a href="#projects"
+class="bg-blue-600 px-6 py-3 rounded-lg">
+View Projects
+</a>
+
+<a href="#contact"
+class="border border-slate-700 px-6 py-3 rounded-lg">
+Contact
+</a>
+</div>
+
+</div>
+
+<div class="flex justify-center">
+<img
+src="images/saman.jpg"
+class="w-80 rounded-3xl border border-slate-700">
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FILTERS -->
+<section id="projects" class="py-20">
+
+<div class="container mx-auto px-6">
+
+<h2 class="text-4xl font-bold text-center mb-10">
+Projects
+</h2>
+
+<div class="flex flex-wrap justify-center gap-3 mb-12">
+
+<button class="filter-btn active px-5 py-2 bg-slate-800 rounded"
+data-filter="all">
+All
+</button>
+
+<button class="filter-btn px-5 py-2 bg-slate-800 rounded"
+data-filter="wordpress">
+WordPress
+</button>
+
+<button class="filter-btn px-5 py-2 bg-slate-800 rounded"
+data-filter="frontend">
+Frontend
+</button>
+
+<button class="filter-btn px-5 py-2 bg-slate-800 rounded"
+data-filter="django">
+Django
+</button>
+
+<button class="filter-btn px-5 py-2 bg-slate-800 rounded"
+data-filter="trading">
+Trading Bots
+</button>
+
+</div>
+
+<div id="grid"
+class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- WORDPRESS -->
+
+<div class="project-card wordpress bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Dining Restaurant Theme
+</h3>
+
+<p class="text-slate-400 mb-4">
+Restaurant WordPress Theme
+</p>
+
+<a href="https://samanbalahang.github.io/dining-theme/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card wordpress bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+AMIRI School Theme
+</h3>
+
+<p class="text-slate-400 mb-4">
+School WordPress Theme
+</p>
+
+<a href="https://samanbalahang.github.io/AMIRI/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card wordpress bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Zibo Theme
+</h3>
+
+<p class="text-slate-400 mb-4">
+WordPress Theme
+</p>
+
+<a href="https://samanbalahang.github.io/zibo/"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card wordpress bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Branding Website
+</h3>
+
+<p class="text-slate-400 mb-4">
+Branding WordPress Theme
+</p>
+
+<a href="https://samanbalahang.github.io/branding/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card wordpress bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Elya WP Theme
+</h3>
+
+<p class="text-slate-400 mb-4">
+WordPress Website
+</p>
+
+<a href="https://samanbalahang.github.io/elyaWp/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card wordpress bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Banta Shop
+</h3>
+
+<p class="text-slate-400 mb-4">
+WooCommerce Theme
+</p>
+
+<a href="https://samanbalahang.github.io/banta/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<!-- FRONTEND -->
+
+<div class="project-card frontend bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Admin Dashboard
+</h3>
+
+<a href="https://samanbalahang.github.io/wordpresshtmladminpanel/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card frontend bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Phoenix Theme
+</h3>
+
+<a href="https://samanbalahang.github.io/phonix/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card frontend bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Calculator
+</h3>
+
+<a href="https://samanbalahang.github.io/calculator/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card frontend bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Simple Shop UI
+</h3>
+
+<a href="https://samanbalahang.github.io/simple-shop-ui/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card frontend bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Kadous Travel Agency
+</h3>
+
+<a href="https://samanbalahang.github.io/kadous/index.html"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<div class="project-card frontend bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Particle JS Effect
+</h3>
+
+<a href="https://samanbalahang.github.io/particlePurejs/"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<!-- DJANGO -->
+
+<div class="project-card django bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Hadad
+</h3>
+
+<a href="https://samanbalahang.github.io/hadad/"
+target="_blank"
+class="text-blue-400">
+View →
+</a>
+</div>
+
+<!-- TRADING -->
+
+<div class="project-card trading bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+MT5 Trading Bot
+</h3>
+
+<a href="https://github.com/samanbalahang/mt5"
+target="_blank"
+class="text-blue-400">
+GitHub →
+</a>
+</div>
+
+<div class="project-card trading bg-slate-900 p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-2">
+Python Trading Bot
+</h3>
+
+<a href="https://github.com/samanbalahang/tradingBot"
+target="_blank"
+class="text-blue-400">
+GitHub →
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="py-20 text-center">
+<h2 class="text-4xl font-bold mb-6">
+Contact
+</h2>
+
+<p>Phone: 09224194485</p>
+<p>Iran</p>
+
+<p class="mt-3">
+<a href="https://github.com/samanbalahang"
+target="_blank"
+class="text-blue-400">
+GitHub Profile
+</a>
+</p>
+</section>
+
+<script>
+
+const buttons=document.querySelectorAll('.filter-btn');
+const cards=document.querySelectorAll('.project-card');
+
+buttons.forEach(btn=>{
+
+btn.addEventListener('click',()=>{
+
+buttons.forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+
+const filter=btn.dataset.filter;
+
+cards.forEach(card=>{
+
+if(filter==='all'){
+card.style.display='block';
+}
+else{
+card.style.display=
+card.classList.contains(filter)
+? 'block'
+: 'none';
+}
+
+});
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

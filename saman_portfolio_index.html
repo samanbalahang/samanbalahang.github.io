@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saman Balahang | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mixitup/dist/mixitup.min.js"></script>
+    <style>
+        body {
+            background: #f8fafc
+        }
+
+        .cursor {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #2563eb;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999
+        }
+
+        .card {
+            transition: .4s
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(37, 99, 235, .2)
+        }
+
+        .hero-image {
+            transition: .6s;
+        }
+
+        .hero-image:hover {
+            transform: translateY(-10px);
+        }
+
+        .hero-image-wrapper {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+    </style>
+</head>
+
+<body class="text-slate-800">
+    <header id="header"
+        class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-slate-200/60 transition-all duration-300">
+        <div class="h-20 px-6 md:px-10 xl:px-16 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="#" class="flex items-center gap-3">
+                <div
+                    class="w-12 h-12 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold">
+                    SB
+                </div>
+                <div>
+                    <h2 class="font-bold text-slate-900">
+                        Saman Balahang
+                    </h2>
+                    <span class="text-xs text-slate-500">
+                        Full Stack Developer
+                    </span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION -->
+            <nav id="menu"
+                class="fixed top-0 right-0 h-screen w-95 max-w-[90vw] bg-white flex flex-col pt-32 px-10 gap-8 translate-x-full transition-transform duration-500 lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:flex-row lg:p-0 lg:translate-x-0">
+                <a class="font-medium text-slate-700 hover:text-blue-600" href="#home">
+                    Home
+                </a>
+                <a class="font-medium text-slate-700 hover:text-blue-600" href="#about">
+                    About
+                </a>
+                <a class="font-medium text-slate-700 hover:text-blue-600" href="#skills">
+                    Skills
+                </a>
+                <a class="font-medium text-slate-700 hover:text-blue-600" href="#projects">
+                    Projects
+                </a>
+                <a class="font-medium text-slate-700 hover:text-blue-600" href="#contact">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- RIGHT SIDE -->
+            <div class="flex items-center gap-5">
+                <a href="#contact"
+                    class="hidden lg:flex items-center px-6 py-3 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600 text-white font-medium hover:scale-105 duration-300">
+                    Let's Talk
+                </a>
+
+                <!-- HAMBURGER -->
+                <button id="menuBtn" class="lg:hidden w-12 h-12 relative">
+                    <span id="line1"
+                        class="absolute left-1/2 top-[35%] -translate-x-1/2 w-7 h-0.5 bg-slate-900 duration-300"></span>
+                    <span id="line2"
+                        class="absolute left-1/2 top-1/2 -translate-x-1/2 w-7 h-0.5 bg-slate-900 duration-300"></span>
+                    <span id="line3"
+                        class="absolute left-1/2 top-[65%] -translate-x-1/2 w-7 h-0.5 bg-slate-900 duration-300"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- OVERLAY -->
+    <div id="overlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm opacity-0 invisible duration-300 z-40">
+    </div>
+    <div id="cursor" class="cursor"></div>
+    <main>
+        <section id="home" class="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-[#0c0503]">
+            <!-- Background Glow -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-225 rounded-full bg-[#ff8a5b]/10 blur-[150px]">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center w-full">
+                <!-- LEFT -->
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2a1612] bg-[#140806] text-sm text-[#ff8a5b] mb-8">
+                        🚀 Available for freelance work
+                    </div>
+
+                    <h1 class="hero-title text-5xl md:text-7xl xl:text-8xl font-black leading-[.95] text-white">
+                        Building
+                        <br>
+                        websites,
+                        <br>
+                        trading bots &
+                        <br>
+                        <span class="text-[#ff8a5b]">
+                            digital products
+                        </span>
+                    </h1>
+
+                    <p class="mt-8 text-lg md:text-xl text-zinc-400 max-w-xl leading-relaxed">
+                        I'm Saman Balahang, a Full-Stack Developer from Iran specializing in Python, Django, Laravel,
+                        Next.js, WordPress development and MetaTrader 5 trading automation.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap gap-4 mt-10">
+                        <a href="#projects"
+                            class="magnetic px-8 py-4 rounded-full bg-[#ff8a5b] text-black font-semibold hover:scale-105 duration-300">
+                            View Projects ↗
+                        </a>
+
+                        <a href="#contact"
+                            class="magnetic px-8 py-4 rounded-full border border-[#2a1612] text-white hover:border-[#ff8a5b] duration-300">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Contact Information with safe bottom spacing -->
+                    <div class="flex flex-wrap gap-8 mt-12 mb-6 text-zinc-500">
+                        <span>📍 Iran</span>
+                        <span>📞 0922 419 4485</span>
+                        <span>💻 samanbalahang</span>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="relative flex justify-center">
+                    <!-- Glow -->
+                    <div class="absolute w-137.5 h-137.5 rounded-full bg-[#ff8a5b]/20 blur-[120px]">
+                    </div>
+
+                    <!-- Photo -->
+                    <div class="relative hero-image-wrapper">
+                        <img src="images/saman.jpg" alt="Saman Balahang"
+                            class="hero-image w-105 lg:w-125 rounded-4xl border border-[#2a1612] relative z-10">
+
+                        <!-- Counter Card -->
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-[#140806] border border-[#2a1612] rounded-3xl px-6 py-5 z-20">
+                            <h3 class="text-4xl font-bold text-[#ff8a5b]">
+                                18+
+                            </h3>
+
+                            <p class="text-zinc-400">
+                                Projects Shipped
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="py-24 px-6 md:px-12 lg:px-20 bg-[#0c0503] text-white">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-white">
+                    About me
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-10 text-zinc-400 text-lg leading-relaxed">
+                    <p>
+                        I've spent years building websites and web apps across the stack — from custom WordPress themes
+                        and
+                        e-commerce shops to Django and Laravel backends, and modern Next.js frontends.
+                    </p>
+                    <p>
+                        Alongside the web, I develop algorithmic trading bots for MetaTrader 5 and Python. I care about
+                        clean code, thoughtful UI, and shipping things that actually work.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS & TOOLS SECTION -->
+        <section id="skills" class="py-20 px-6 md:px-12 lg:px-20 bg-[#0c0503] text-white">
+            <div class="max-w-5xl mx-auto">
+                <div
+                    class="flex items-center gap-2 text-[#ff8a5b] text-xs font-semibold tracking-widest uppercase mb-3">
+                    <span>&lt;/&gt;</span> TECH STACK
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10 text-white">
+                    Skills & tools
+                </h2>
+
+                <!-- Skills Badges Grid / Flex -->
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Python</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Django</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">PHP</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Laravel</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Next.js</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">React</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">WordPress</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">TypeScript</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Tailwind
+                        CSS</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">HTML/CSS/JS</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">MetaTrader
+                        5</span>
+                    <span
+                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Trading
+                        Bots</span>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="bg-[#0c0503] text-white">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-24 bg-[#0c0503] text-white">
+                <div class="mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-white">Selected projects</h2>
+                    <p class="text-zinc-400 text-base md:text-lg">A collection of themes, apps and bots I've built.</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2 mb-12">
+                    <button
+                        class="px-5 py-2.5 rounded-full text-sm font-medium bg-[#ff8a5b] text-black transition-all duration-300"
+                        data-filter="all">All</button>
+                    <button
+                        class="px-5 py-2.5 rounded-full text-sm font-medium border border-[#2a1612] bg-[#140806] text-zinc-300 hover:border-[#ff8a5b] transition-all duration-300"
+                        data-filter=".wordpress">WordPress</button>
+                    <button
+                        class="px-5 py-2.5 rounded-full text-sm font-medium border border-[#2a1612] bg-[#140806] text-zinc-300 hover:border-[#ff8a5b] transition-all duration-300"
+                        data-filter=".frontend">HTML/CSS/JS</button>
+                    <button
+                        class="px-5 py-2.5 rounded-full text-sm font-medium border border-[#2a1612] bg-[#140806] text-zinc-300 hover:border-[#ff8a5b] transition-all duration-300"
+                        data-filter=".django">Python/Django</button>
+                    <button
+                        class="px-5 py-2.5 rounded-full text-sm font-medium border border-[#2a1612] bg-[#140806] text-zinc-300 hover:border-[#ff8a5b] transition-all duration-300"
+                        data-filter=".trading">Trading</button>
+                </div>
+
+                <!-- Grid of Projects with Clickable Cards Opening in New Tab -->
+                <div id="grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- 1. Dining Theme -->
+                    <a href="https://samanbalahang.github.io/dining-theme/index.html" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Dining Theme</h3>
+                            <p class="text-zinc-400 text-sm mb-6">Restaurant WordPress theme demo built in HTML.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML</span>
+                        </div>
+                    </a>
+
+                    <!-- 2. AMIRI School -->
+                    <a href="https://samanbalahang.github.io/AMIRI/index.html" target="_blank" rel="noopener noreferrer"
+                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">AMIRI School</h3>
+                            <p class="text-zinc-400 text-sm mb-6">School-based WordPress theme.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
+                        </div>
+                    </a>
+
+                    <!-- 3. Zibo -->
+                    <a href="https://samanbalahang.github.io/zibo/" target="_blank" rel="noopener noreferrer"
+                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Zibo</h3>
+                            <p class="text-zinc-400 text-sm mb-6">WordPress theme.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
+                        </div>
+                    </a>
+
+                    <!-- 4. Branding Site -->
+                    <a href="https://samanbalahang.github.io/branding/index.html" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Branding Site</h3>
+                            <p class="text-zinc-400 text-sm mb-6">Branding website built with WordPress.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
+                        </div>
+                    </a>
+
+                    <!-- 5. ElyaWP -->
+                    <a href="https://samanbalahang.github.io/elyaWp/index.html" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">ElyaWP</h3>
+                            <p class="text-zinc-400 text-sm mb-6">Sample WordPress website.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
+                        </div>
+                    </a>
+
+                    <!-- 6. Banta Shop -->
+                    <a href="https://samanbalahang.github.io/banta/index.html" target="_blank" rel="noopener noreferrer"
+                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Banta Shop</h3>
+                            <p class="text-zinc-400 text-sm mb-6">E-commerce shop built with WordPress.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Shop</span>
+                        </div>
+                    </a>
+
+                    <!-- 7. Katibeh -->
+                    <a href="https://samanbalahang.github.io/katibeh/" target="_blank" rel="noopener noreferrer"
+                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Katibeh</h3>
+                            <p class="text-zinc-400 text-sm mb-6">WordPress theme for branding company.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Branding</span>
+                        </div>
+                    </a>
+
+                    <!-- 8. Katibeh Tahrir -->
+                    <a href="https://samanbalahang.github.io/katibehTahrir/" target="_blank" rel="noopener noreferrer"
+                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Katibeh Tahrir</h3>
+                            <p class="text-zinc-400 text-sm mb-6">Stationery store by WordPress.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Store</span>
+                        </div>
+                    </a>
+
+                    <!-- 9. Admin Panel -->
+                    <a href="https://samanbalahang.github.io/wordpresshtmladminpanel/index.html" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Admin Panel</h3>
+                            <p class="text-zinc-400 text-sm mb-6">HTML, CSS, JS admin panel.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">CSS</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">JS</span>
+                        </div>
+                    </a>
+
+                    <!-- 10. Phonix -->
+                    <a href="https://samanbalahang.github.io/phonix/index.html" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Phonix</h3>
+                            <p class="text-zinc-400 text-sm mb-6">A sample web theme html, css, js.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">CSS</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">JS</span>
+                        </div>
+                    </a>
+
+                    <!-- 11. HTML Shop -->
+                    <a href="https://github.com/samanbalahang/html-shop" target="_blank" rel="noopener noreferrer"
+                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">HTML Shop</h3>
+                            <p class="text-zinc-400 text-sm mb-6">A shop with html, css, js.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Shop</span>
+                        </div>
+                    </a>
+
+                    <!-- 12. Calculator -->
+                    <a href="https://samanbalahang.github.io/calculator/index.html" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Calculator</h3>
+                            <p class="text-zinc-400 text-sm mb-6">A calculator by html, css, js.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">JS</span>
+                        </div>
+                    </a>
+
+                    <!-- 13. Simple Shop UI -->
+                    <a href="https://samanbalahang.github.io/simple-shop-ui/index.html" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Simple Shop UI</h3>
+                            <p class="text-zinc-400 text-sm mb-6">Simple shop with html css and js.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">UI</span>
+                        </div>
+                    </a>
+
+                    <!-- 14. Kadous Travel -->
+                    <a href="https://samanbalahang.github.io/kadous/index.html" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Kadous Travel</h3>
+                            <p class="text-zinc-400 text-sm mb-6">An traveling agency html, css, js theme.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML/CSS</span>
+                        </div>
+                    </a>
+
+                    <!-- 15. Particle JS -->
+                    <a href="https://samanbalahang.github.io/particlePurejs/" target="_blank" rel="noopener noreferrer"
+                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Particle JS</h3>
+                            <p class="text-zinc-400 text-sm mb-6">An js effect.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">JavaScript</span>
+                        </div>
+                    </a>
+
+                    <!-- 16. Hadad Django -->
+                    <a href="https://samanbalahang.github.io/hadad/" target="_blank" rel="noopener noreferrer"
+                        class="mix django card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">Python/Django</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Hadad Django</h3>
+                            <p class="text-zinc-400 text-sm mb-6">A django web site.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Python</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Django</span>
+                        </div>
+                    </a>
+
+                    <!-- 17. MT5 Bot -->
+                    <a href="https://github.com/samanbalahang/mt5" target="_blank" rel="noopener noreferrer"
+                        class="mix trading card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">Trading</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">MT5 Bot</h3>
+                            <p class="text-zinc-400 text-sm mb-6">Trading bots for metatrader 5.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">MQL5</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Trading</span>
+                        </div>
+                    </a>
+
+                    <!-- 18. Python Trading Bot -->
+                    <a href="https://github.com/samanbalahang/tradingBot" target="_blank" rel="noopener noreferrer"
+                        class="mix trading card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer">
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">Trading</span>
+                                <span
+                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Python Trading Bot</h3>
+                            <p class="text-zinc-400 text-sm mb-6">Python base trading bots.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Python</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">APIs</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contact" class="bg-[#0c0503] text-white pt-24 pb-12 px-6 md:px-12 lg:px-20 border-t border-[#2a1612]">
+        <div class="max-w-5xl mx-auto text-center">
+            <!-- Heading -->
+            <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-4 text-white">
+                Let’s build <span class="text-[#ff8a5b]">something great</span>
+            </h2>
+
+            <p class="text-zinc-400 text-base md:text-lg max-w-xl mx-auto mb-16 leading-relaxed">
+                Have a project in mind — a website, WordPress theme, custom Django/Laravel app or a trading bot? Reach
+                out.
+            </p>
+
+            <!-- Contact Cards Grid -->
+            <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-20">
+                <!-- Phone Card -->
+                <a href="tel:09224194485"
+                    class="group bg-[#140806] border border-[#2a1612] p-6 rounded-3xl flex items-center gap-5 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#ff8a5b] text-black flex items-center justify-center font-bold shrink-0">
+                        📞
+                    </div>
+                    <div class="text-left">
+                        <span
+                            class="text-xs text-zinc-500 font-semibold tracking-wider uppercase block mb-1">PHONE</span>
+                        <span
+                            class="text-white font-bold text-lg group-hover:text-[#ff8a5b] transition-colors duration-300">0922
+                            419 4485</span>
+                    </div>
+                </a>
+
+                <!-- GitHub Card -->
+                <a href="https://github.com/samanbalahang?tab=repositories" target="_blank" rel="noopener noreferrer"
+                    class="group bg-[#140806] border border-[#2a1612] p-6 rounded-3xl flex items-center gap-5 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-[#ff8a5b] text-black flex items-center justify-center font-bold shrink-0">
+                        💻
+                    </div>
+                    <div class="text-left">
+                        <span
+                            class="text-xs text-zinc-500 font-semibold tracking-wider uppercase block mb-1">GITHUB</span>
+                        <span
+                            class="text-white font-bold text-lg group-hover:text-[#ff8a5b] transition-colors duration-300">samanbalahang</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Bottom Copyright and Location Bar -->
+            <div
+                class="pt-8 border-t border-[#2a1612] flex flex-col sm:flex-row items-center justify-between text-sm text-zinc-500 gap-4">
+                <p>© 2026 Saman Balahang. All rights reserved.</p>
+                <div class="flex items-center gap-2">
+                    <span>✉ Based in Iran</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        mixitup('#grid');
+        gsap.registerPlugin(ScrollTrigger);
+        document.addEventListener('mousemove', e => {
+            gsap.to('#cursor', { x: e.clientX - 15, y: e.clientY - 15, duration: .2 });
+        });
+        gsap.from(".hero-title", {
+            y: 120,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power4.out"
+        });
+        gsap.from(".hero-image-wrapper", {
+            x: 150,
+            opacity: 0,
+            duration: 1.4,
+            delay: .3,
+            ease: "power4.out"
+        });
+        const menuBtn = document.getElementById("menuBtn");
+        const menu = document.getElementById("menu");
+        const overlay = document.getElementById("overlay");
+        const line1 = document.getElementById("line1");
+        const line2 = document.getElementById("line2");
+        const line3 = document.getElementById("line3");
+        let isOpen = false;
+
+        menuBtn.addEventListener("click", () => {
+            isOpen = !isOpen;
+            if (isOpen) {
+                menu.classList.remove("translate-x-full");
+                overlay.classList.remove("opacity-0", "invisible");
+                line1.style.transform = "translate(-50%,8px) rotate(45deg)";
+                line2.style.opacity = "0";
+                line3.style.transform = "translate(-50%,-8px) rotate(-45deg)";
+            } else {
+                menu.classList.add("translate-x-full");
+                overlay.classList.add("opacity-0", "invisible");
+                line1.style.transform = "translateX(-50%)";
+                line2.style.opacity = "1";
+                line3.style.transform = "translateX(-50%)";
+            }
+        });
+
+        overlay.addEventListener("click", () => menuBtn.click());
+    </script>
+</body>
+
+</html>
