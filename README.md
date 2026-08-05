@@ -1,3 +1,8 @@
+# view online demo
+
+[demo](samanbalahang.github.io)
+
+
 # 🚀 Welcome to My Interactive Portfolio
 
 Hi there! I'm saman balahang, a passionate and creative web designer dedicated to crafting beautiful, responsive, and user-friendly digital experiences. I specialize in front-end development and love bringing ideas to life through code.
@@ -68,11 +73,11 @@ Let's Connect!
 
 📲 Telegram: @Sambaltel
 
-💼 LinkedIn: [linkedin.com/in/yourprofile](https://ir.linkedin.com/in/sambal-ln-0a5195138?trk=public_post_feed-actor-name&original_referer=https%3A%2F%2Fwww.linkedin.com%2F)
+💼 LinkedIn: [linkedin.com/in/samanbalahang](https://www.linkedin.com/in/sambal-ln-0a5195138/)
 
-🐙 GitHub: [github.com/yourusername](https://github.com/samanbalahang)
+🐙 GitHub: [github.com/samanbalahang](https://github.com/samanbalahang)
 
-📚 aparat: [yourportfolio.com](https://www.aparat.com/samanbalahang)
+📚 aparat: [https://www.aparat.com/samanbalahang](hhttps://www.aparat.com/samanbalahang)
 
 
 *Built with passion using modern web technologies and powered by GSAP magic ✨*
