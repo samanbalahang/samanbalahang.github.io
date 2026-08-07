@@ -1,8 +1,24 @@
 window.addEventListener("DOMContentLoaded", () => {
     mixitup('#grid');
     gsap.registerPlugin(ScrollTrigger);
-    document.addEventListener('mousemove', e => {
-        gsap.to('#cursor', { x: e.clientX - 15, y: e.clientY - 15, duration: .2 });
+    // document.addEventListener('mousemove', e => {
+    //     gsap.to('#cursor', { x: e.clientX - 15, y: e.clientY - 15, duration: .2 });
+    // });
+    const cursor = document.querySelector("#cursor");
+
+    const moveX = gsap.quickTo(cursor, "x", {
+        duration: 0.3,
+        ease: "power3"
+    });
+
+    const moveY = gsap.quickTo(cursor, "y", {
+        duration: 0.3,
+        ease: "power3"
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        moveX(e.clientX - 15);
+        moveY(e.clientY - 15);
     });
     document.querySelectorAll('.scale-it').forEach(el => {
         el.addEventListener('mouseenter', () => {

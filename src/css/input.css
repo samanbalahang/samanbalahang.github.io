@@ -119,8 +119,8 @@ font-face {
 
 @font-face {
   font-family: 'yekan';
-  src: url('BYekan-Bold.woff2') format('woff2'),
-    url('BYekan-Bold.woff') format('woff');
+  src: url('fonts/BYekan-Bold.woff2') format('woff2'),
+    url('fonts/BYekan-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -143,9 +143,9 @@ font-face {
   --font-shin: "shin";
   --font-estedad: "Estedad";
   --font-dastNevis: "DastNevis";
-  --font-yekan: "Yekan";
+  --font-yekan: "yekan";
   --font-sina: "sina";
-  --font-nazanin: "NAZANIN";
+  --font-nazanin: "nazanin";
   --text-h1: 3rem;
   --text-h1--line-height: 3rem;
   --text-h1--font-weight: bold;
@@ -163,13 +163,15 @@ body {
 }
 
 .cursor {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #2563eb;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #2563eb;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 .card {
