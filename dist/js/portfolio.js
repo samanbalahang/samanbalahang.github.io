@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.scale-it').forEach(el => {
         el.addEventListener('mouseenter', () => {
             gsap.to(el, {
-                color: '#ecfd00', // Blue
+                color: '#00d4ff', // Blue
                 duration: 0.3,
                 ease: "power2.out"
             });
@@ -202,4 +202,37 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 
     });
+    const indicator = document.querySelector(
+        ".flex.flex-col.items-center.gap-1\\.5"
+    );
+
+    const dot = document.querySelector(
+        ".size-1\\.5.rounded-full.bg-primary"
+    );
+
+    if (!indicator || !dot) return;
+
+    let start = null;
+
+    function animate(timestamp) {
+        if (!start) start = timestamp;
+
+        const elapsed = (timestamp - start) / 1000;
+
+        // Smooth up-and-down movement
+        const movement = (Math.sin(elapsed * 2.5) + 1) / 2;
+
+        indicator.style.transform =
+            `translateY(${movement * 8}px)`;
+
+        dot.style.transform =
+            `translateY(${movement * 10}px)`;
+
+        requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+
 })
+
+

@@ -10,6 +10,18 @@
     <script src="dist/js/ScrollTrigger.min.js"></script>
     <script src="dist/js/mixitup.min.js"></script>
     <link rel="icon" href="dist/images/fav-icon.webp" type="image/webp" sizes="any">
+    <link rel="preload" href="./dist/fonts/Estedad-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/Estedad-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/Estedad-ExtraBold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/Estedad-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/Estedad-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/Estedad-Thin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/Estedad-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/Estedad-ExtraLight.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/DastNevis.woff" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/AdobeArabicSHIN-TypoBold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./dist/fonts/BNazanin.woff2" as="font" type="font/woff2" crossorigin />
 </head>
 
 <body class="text-slate-800 font-estedad">
@@ -68,15 +80,16 @@
                     <div
                         class="absolute right-0 top-full pt-2 w-28 bg-white rounded-xl shadow-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 overflow-hidden">
 
-                        <a href="?lang=en" class="block px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600">
+                        <a href="./fa.html" class="block px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600">
                             FA
                         </a>
 
-                        <a href="?lang=fa" class="block px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600">
+                        <a href="index.html"
+                            class="block px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600">
                             EN
                         </a>
 
-                        <a href="?lang=he" class="block px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600">
+                        <a href="./he.html" class="block px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600">
                             HE
                         </a>
                     </div>
@@ -103,59 +116,77 @@
     </div>
     <div id="cursor" class="cursor"></div>
     <main>
-        <section id="home" class="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-[#0c0503]">
+        <section id="home" class="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-blue bg-grid">
             <!-- Background Glow -->
             <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-225 rounded-full bg-[#ff8a5b]/10 blur-[150px]">
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-225 rounded-full bg-primary/10 blur-[150px]">
             </div>
 
-            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center w-full font-yekan">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center w-full">
                 <!-- LEFT -->
                 <div>
                     <div
-                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2a1612] bg-[#140806] text-sm text-[#ff8a5b] mb-8">
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary bg-semitrans text-sm text-primary mb-8">
                         🚀 میتوانید برای استخدام با من تماس بگیرید
                     </div>
 
-                    <h1 class="hero-title text-5xl md:text-7xl xl:text-8xl  leading-[.95] text-white font-yekan!">
-                        طراحی و ساخت
-                        <br>
-                        وب اپلیکیشن و وبسایت
+                    <h1 class="hero-title text-3xl md:text-7xl xl:text-7xl font-black leading-[1.2] text-white">
+                        طراحی وبسایت و 
                         <br>
                         ربات های ترید و
                         <br>
-                        <span class="text-[#ff8a5b]">
+                        <span class="text-primary">
                             محصولات دیجیتال
                         </span>
                     </h1>
 
-                    <p class="mt-8 text-lg md:text-xl text-zinc-400 max-w-xl leading-relaxed scale-it text-justify">
+                    <p class="mt-8 text-lg md:text-xl text-primary max-w-xl leading-relaxed scale-it text-justify">
                         من سامان بالاهنگ هستم، توسعه‌دهنده فول‌استک از ایران. در زمینه توسعه وب، با تمرکز بر Python،
                         Django، Laravel، Next.js و WordPress فعالیت می‌کنم و تجربه ساخت وب‌سایت‌ها، وب‌اپلیکیشن‌ها و
                         سیستم‌های سفارشی را دارم. علاوه بر توسعه وب، در حوزه اتوماسیون معاملاتی و ساخت ربات‌های
                         الگوریتمی برای MetaTrader 5 نیز فعالیت می‌کنم. هدف من ایجاد راهکارهای حرفه‌ای، کاربردی و قابل
                         اعتماد است.
                     </p>
-                   
+
 
                     <!-- Buttons -->
                     <div class="flex flex-wrap gap-4 mt-10">
                         <a href="#projects"
-                            class="magnetic px-8 py-4 rounded-full bg-[#ff8a5b]  text-black hover:scale-105 duration-300">
+                            class="magnetic px-8 py-4 rounded-full bg-primary text-black hover:scale-105 duration-300">
                             مشاهده پروژه‌ها ↗
                         </a>
 
                         <a href="#contact"
-                            class="magnetic px-8 py-4 rounded-full border border-[#2a1612] text-white hover:border-[#ff8a5b] duration-300">
+                            class="magnetic px-8 py-4 rounded-full border border-primary text-white hover:bg-hover duration-300">
                             تماس بگیرید
                         </a>
                     </div>
 
                     <!-- Contact Information with safe bottom spacing -->
                     <div class="flex flex-wrap gap-8 mt-12 mb-6 text-zinc-500">
-                        <span>📍 Iran</span>
-                        <span>📞 0922 419 4485</span>
-                        <span class="scale-it">💻 سامان بالاهنگ</span>
+                        <span class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px"
+                                class="fill-primary">
+                                <path
+                                    d="M13.28,11.34q0.53-0.53 0.53-1.28T13.28,8.78T12,8.25T10.72,8.78t-0.53,1.28t0.53,1.28T12,11.87t1.28-0.53ZM12,19.51q2.93-2.63 4.49-5.04t1.56-4.23q0-2.73-1.74-4.5T12,3.99T7.69,5.75t-1.74,4.5q0,1.81 1.56,4.23T12,19.51Zm0,2q-3.77-3.27-5.66-6.09T4.45,10.25q0-3.46 2.24-5.6T12,2.5t5.31,2.14t2.24,5.6q0,2.36-1.89,5.17T12,21.51Zm0-11.45Z" />
+                            </svg>
+                            Iran
+
+                        </span>
+                        <span class="scale-it flex flex-row-reverse ltr">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px"
+                                class="fill-primary">
+                                <path
+                                    d="M2.13,19.63q-0.67,0-1.15-0.48T0.5,18H4.31q-0.76,0-1.28-0.52T2.5,16.19V5.31q0-0.76 0.52-1.28T4.31,3.5H19.69q0.76,0 1.28,0.52T21.5,5.31V16.19q0,0.76-0.52,1.28T19.69,18H23.5q0,0.67-0.48,1.15t-1.15,0.48H2.13Zm10.44-0.98q0.23-0.23 0.23-0.57T12.57,17.5T12,17.27T11.43,17.5t-0.23,0.57t0.23,0.57T12,18.88t0.57-0.23ZM4.31,16.5H19.69q0.12,0 0.21-0.1T20,16.19V5.31q0-0.12-0.1-0.21T19.69,5H4.31Q4.19,5 4.1,5.1T4,5.31V16.19q0,0.12 0.1,0.21t0.21,0.1ZM4,16.5q0,0 0-0.1t0-0.21V5.31Q4,5.19 4,5.1T4,5Q4,5 4,5.1T4,5.31V16.19q0,0.12 0,0.21t0,0.1Z" />
+                            </svg>
+                            0922 419 4485</span>
+                        <span class="scale-it flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px"
+                                class="fill-primary">
+                                <path
+                                    d="M2.13,19.63q-0.67,0-1.15-0.48T0.5,18H4.31q-0.76,0-1.28-0.52T2.5,16.19V5.31q0-0.76 0.52-1.28T4.31,3.5H19.69q0.76,0 1.28,0.52T21.5,5.31V16.19q0,0.76-0.52,1.28T19.69,18H23.5q0,0.67-0.48,1.15t-1.15,0.48H2.13Zm10.44-0.98q0.23-0.23 0.23-0.57T12.57,17.5T12,17.27T11.43,17.5t-0.23,0.57t0.23,0.57T12,18.88t0.57-0.23ZM4.31,16.5H19.69q0.12,0 0.21-0.1T20,16.19V5.31q0-0.12-0.1-0.21T19.69,5H4.31Q4.19,5 4.1,5.1T4,5.31V16.19q0,0.12 0.1,0.21t0.21,0.1ZM4,16.5q0,0 0-0.1t0-0.21V5.31Q4,5.19 4,5.1T4,5Q4,5 4,5.1T4,5.31V16.19q0,0.12 0,0.21t0,0.1Z" />
+                            </svg>
+                            سامان بالاهنگ</span>
                     </div>
                 </div>
 
@@ -164,22 +195,22 @@
                 <!-- RIGHT -->
                 <div class="relative flex justify-center">
                     <!-- Glow -->
-                    <div class="absolute w-137.5 h-137.5 rounded-full bg-[#ff8a5b]/20 blur-[120px]">
+                    <div class="absolute w-137.5 h-137.5 rounded-full bg-primary/20 blur-[120px]">
                     </div>
 
                     <!-- Photo -->
                     <div class="relative hero-image-wrapper">
-                        <img src="dist/images/portfolio.webp" alt="سامان بالاهنگ"
-                            class="hero-image w-105 lg:w-125 rounded-4xl border border-[#2a1612] relative z-10">
+                        <img src="dist/images/portfolio-fa.webp" alt="سامان بالاهنگ"
+                            class="hero-image w-105 lg:w-125 rounded-4xl border border-primary relative z-10">
 
                         <!-- Counter Card -->
                         <div
-                            class="absolute -bottom-6 -left-6 bg-[#140806] border border-[#2a1612] rounded-3xl px-6 py-5 z-20">
-                            <h3 class="text-4xl font-bold text-[#ff8a5b]">
+                            class="absolute -bottom-6 -left-6 bg-semitrans border border-primary rounded-3xl px-6 py-5 z-20">
+                            <h3 class="text-4xl font-bold text-primary">
                                 100+
                             </h3>
 
-                            <p class="text-zinc-400">
+                            <p class="text-primary">
                                 پروژه در گیتهاب
                             </p>
                         </div>
@@ -187,517 +218,559 @@
                 </div>
             </div>
         </section>
-        <!-- ABOUT ME SECTION -->
-        <section id="about" class="py-24 px-6 md:px-12 lg:px-20 bg-[#0c0503] text-white">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-white about-title">
-                    درباره من
-                </h2>
+        <div class="relative w-full">
 
-                <div class="grid md:grid-cols-2 gap-10 text-zinc-400 text-lg leading-relaxed animated-content">
-                    <p class="text-justify">
-                        طی سال‌های فعالیت در حوزه توسعه وب، روی پروژه‌های مختلفی کار کرده‌ام؛ از قالب‌های سفارشی وردپرس
-                        و فروشگاه‌های اینترنتی گرفته تا طراحی و توسعه سیستم‌های بک‌اند با Django و Laravel و رابط‌های
-                        کاربری مدرن با Next.js. همیشه تلاش کرده‌ام ترکیبی از کدنویسی تمیز، طراحی کاربردی و ساخت محصولاتی
-                        را ارائه دهم که واقعاً برای کاربران و کسب‌وکارها ارزش ایجاد کنند.
-                    </p>
-                    <p class="text-justify">
-                        علاوه بر طراحی و توسعه وب، در زمینه ساخت ربات‌های معاملاتی الگوریتمی برای MetaTrader 5 و Python
-                        نیز فعالیت می‌کنم. در تمام پروژه‌ها، تمرکز من بر نوشتن کد تمیز، طراحی رابط کاربری حرفه‌ای و
-                        ارائه راهکارهایی است که واقعاً کاربردی و قابل اعتماد باشند.
-                    </p>
+            <!-- ABOUT ME SECTION -->
+            <section id="about" class="py-24 px-6 md:px-12 lg:px-20 bg-transparent text-white">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-white about-title">
+                        درباره من
+                    </h2>
+
+                    <div class="grid md:grid-cols-2 gap-10 text-primary text-lg leading-relaxed animated-content">
+                        <p class="text-justify">
+                            طی سال‌های فعالیت در حوزه توسعه وب، روی پروژه‌های مختلفی کار کرده‌ام؛ از قالب‌های سفارشی
+                            وردپرس
+                            و فروشگاه‌های اینترنتی گرفته تا طراحی و توسعه سیستم‌های بک‌اند با Django و Laravel و
+                            رابط‌های
+                            کاربری مدرن با Next.js. همیشه تلاش کرده‌ام ترکیبی از کدنویسی تمیز، طراحی کاربردی و ساخت
+                            محصولاتی
+                            را ارائه دهم که واقعاً برای کاربران و کسب‌وکارها ارزش ایجاد کنند.
+                        </p>
+                        <p class="text-justify">
+                            علاوه بر طراحی و توسعه وب، در زمینه ساخت ربات‌های معاملاتی الگوریتمی برای MetaTrader 5 و
+                            Python
+                            نیز فعالیت می‌کنم. در تمام پروژه‌ها، تمرکز من بر نوشتن کد تمیز، طراحی رابط کاربری حرفه‌ای و
+                            ارائه راهکارهایی است که واقعاً کاربردی و قابل اعتماد باشند.
+                        </p>
+                    </div>
                 </div>
+            </section>
+
+            <!-- SKILLS & TOOLS SECTION -->
+            <section id="skills" class="py-20 px-6 md:px-12 lg:px-20 bg-transparent text-white">
+                <div class="max-w-5xl mx-auto">
+                    <div
+                        class="flex items-center gap-2 text-primary text-xs font-semibold tracking-widest uppercase mb-3">
+                        <span>&lt;/&gt;</span>
+                        <span class="typing">
+                            ابزارهایی که برای کد نویسی استفاده میکنم
+                        </span>
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10 text-white">
+                        مهارت‌ها و ابزارها
+                    </h2>
+
+                    <!-- Skills Badges Grid / Flex -->
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">Python</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">Django</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">PHP</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">Laravel</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">Next.js</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">React</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">WordPress</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">TypeScript</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">Tailwind
+                            CSS</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">HTML/CSS/JS</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">MetaTrader
+                            5</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full border border-primary bg-semitrans text-zinc-300 text-sm font-medium hover:bg-hover transition-colors duration-300">Trading
+                            Bots</span>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class="bg-transparent text-white">
+                <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-24 bg-transparent text-white">
+                    <div class="mb-12 animation-content">
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-white">برخی از پروژه های من
+                        </h2>
+                        <p class="text-primary text-base md:text-lg">مجموعه ایی از قالب ها، ربات ها و سایت هایی که طراحی
+                            کرده‌ام</p>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 mb-12">
+                        <button
+                            class="px-5 py-2.5 rounded-full text-sm font-medium bg-primary text-black transition-all duration-300"
+                            data-filter="all">All</button>
+                        <button
+                            class="px-5 py-2.5 rounded-full text-sm font-medium border border-primary bg-semitrans text-zinc-300 hover:bg-hover transition-all duration-300"
+                            data-filter=".wordpress">WordPress</button>
+                        <button
+                            class="px-5 py-2.5 rounded-full text-sm font-medium border border-primary bg-semitrans text-zinc-300 hover:bg-hover transition-all duration-300"
+                            data-filter=".frontend">HTML/CSS/JS</button>
+                        <button
+                            class="px-5 py-2.5 rounded-full text-sm font-medium border border-primary bg-semitrans text-zinc-300 hover:bg-hover transition-all duration-300"
+                            data-filter=".django">Python/Django</button>
+                        <button
+                            class="px-5 py-2.5 rounded-full text-sm font-medium border border-primary bg-semitrans text-zinc-300 hover:bg-hover transition-all duration-300"
+                            data-filter=".trading">Trading</button>
+                    </div>
+
+                    <!-- Grid of Projects with Clickable Cards Opening in New Tab -->
+                    <div id="grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- 1. Dining Theme -->
+                        <a href="https://samanbalahang.github.io/dining-theme/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix wordpress card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">WordPress</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">تم رستوران</h3>
+                                <p class="text-primary text-sm mb-6">تم وردپرسی رستوران با دموی html</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">WordPress</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">HTML</span>
+                            </div>
+                        </a>
+
+                        <!-- 2. AMIRI School -->
+                        <a href="https://samanbalahang.github.io/AMIRI/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix wordpress card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">WordPress</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">آموزشگاه مبتکران</h3>
+                                <p class="text-primary text-sm mb-6">تم آموزشگاه دمو html</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">WordPress</span>
+                            </div>
+                        </a>
+
+                        <!-- 3. Zibo -->
+                        <a href="https://samanbalahang.github.io/zibo/" target="_blank" rel="noopener noreferrer"
+                            class="mix wordpress card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">WordPress</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">تم سالن زیبایی</h3>
+                                <p class="text-primary text-sm mb-6">تم مشکی طلایی با دموی HTML</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">WordPress</span>
+                            </div>
+                        </a>
+
+                        <!-- 4. Branding Site -->
+                        <a href="https://samanbalahang.github.io/branding/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix wordpress card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">WordPress</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">تم برندینگ</h3>
+                                <p class="text-primary text-sm mb-6">تم طراحی شده برای کتیبه ناجی گرافیک: کیان فرزین</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">WordPress</span>
+                            </div>
+                        </a>
+
+                        <!-- 5. ElyaWP -->
+                        <a href="https://samanbalahang.github.io/elyaWp/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix wordpress card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">WordPress</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">تم سالن</h3>
+                                <p class="text-primary text-sm mb-6">تم برای آموزش</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">WordPress</span>
+                            </div>
+                        </a>
+
+                        <!-- 6. Banta Shop -->
+                        <a href="https://samanbalahang.github.io/banta/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix wordpress card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">WordPress</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">تم فروشگاه</h3>
+                                <p class="text-primary text-sm mb-6">یک تم فروشگاهی با دموی HTML</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">WordPress</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">Shop</span>
+                            </div>
+                        </a>
+
+                        <!-- 7. Katibeh -->
+                        <a href="https://samanbalahang.github.io/katibeh/" target="_blank" rel="noopener noreferrer"
+                            class="mix wordpress card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">WordPress</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">تم کتیبه</h3>
+                                <p class="text-primary text-sm mb-6">تم سایت قبلی کتیبه دمو HTML</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">WordPress</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">Branding</span>
+                            </div>
+                        </a>
+
+                        <!-- 8. Katibeh Tahrir -->
+                        <a href="https://samanbalahang.github.io/katibehTahrir/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix wordpress card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">WordPress</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">تحریروان</h3>
+                                <p class="text-primary text-sm mb-6">تم لوازم تحریر فروشگاهی دمو HTML</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">WordPress</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">Store</span>
+                            </div>
+                        </a>
+
+                        <!-- 9. Admin Panel -->
+                        <a href="https://samanbalahang.github.io/wordpresshtmladminpanel/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix frontend card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">HTML/CSS/JS</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">پنل ادمین</h3>
+                                <p class="text-primary text-sm mb-6">HTML, CSS, JS ادمین پنل</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">HTML</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">CSS</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">JS</span>
+                            </div>
+                        </a>
+
+                        <!-- 10. Phonix -->
+                        <a href="https://samanbalahang.github.io/phonix/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix frontend card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">HTML/CSS/JS</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">فونیکس تم تمرینی</h3>
+                                <p class="text-primary text-sm mb-6"> 
+                                    تم تمرینی برای دانشجویان,
+                                    HTML,CSS,JS
+                                </p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">HTML</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">CSS</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">JS</span>
+                            </div>
+                        </a>
+
+                        <!-- 11. HTML Shop -->
+                        <a href="https://samanbalahang.github.io/html-shop/" target="_blank" rel="noopener noreferrer"
+                            class="mix frontend card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">HTML/CSS/JS</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">تم فروشگاه</h3>
+                                <p class="text-primary text-sm mb-6">A 
+                                    تم فروشگاه طراحی شده با HTML,CSS,JS
+                                </p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">HTML</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">Shop</span>
+                            </div>
+                        </a>
+
+                        <!-- 12. Calculator -->
+                        <a href="https://samanbalahang.github.io/calculator/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix frontend card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">HTML/CSS/JS</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">ماشین حساب برای تمرین دانشجو</h3>
+                                <p class="text-primary text-sm mb-6"> 
+                                    طراحی یک ماشین حساب برای کلاس درس
+                                    .</p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">JS</span>
+                            </div>
+                        </a>
+
+                        <!-- 13. Simple Shop UI -->
+                        <a href="https://samanbalahang.github.io/simple-shop-ui/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix frontend card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">HTML/CSS/JS</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">طراحی ظاهر یک فروشگاه</h3>
+                                <p class="text-primary text-sm mb-6">
+                                    طراحی سایت فروشگاهی برای تمرین
+                                    HTML,CSS,JS
+                                </p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">UI</span>
+                            </div>
+                        </a>
+
+                        <!-- 14. Kadous Travel -->
+                        <a href="https://samanbalahang.github.io/kadous/index.html" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix frontend card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">HTML/CSS/JS</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">سایت تمرینی کادوس</h3>
+                                <p class="text-primary text-sm mb-6">
+                                    یک سایت تمرینی در حوزه گردشگری
+                                </p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">HTML/CSS</span>
+                            </div>
+                        </a>
+
+                        <!-- 15. Particle JS -->
+                        <a href="https://samanbalahang.github.io/particlePurejs/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="mix frontend card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">HTML/CSS/JS</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">طراحی سیستم ذرات با three.js</h3>
+                                <p class="text-primary text-sm mb-6">
+                                    طراحی سیستم ذرات با کتابخانه و بدون آن
+                                </p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">JavaScript</span>
+                            </div>
+                        </a>
+
+                        <!-- 16. Hadad Django -->
+                        <a href="https://samanbalahang.github.io/hadad/" target="_blank" rel="noopener noreferrer"
+                            class="mix django card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">Python/Django</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">سایت سرکار خانم حداد</h3>
+                                <p class="text-primary text-sm mb-6">
+                                    یک سایت در حوزه نقاشی و هنر با جنگو دمو HTML
+                                    / برخی نقاشی های دمو اثر سرکار خانم حداد میباشد و با اجازه ایشان در این دمو قرار گرفته است.
+                                </p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">Python</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">Django</span>
+                            </div>
+                        </a>
+
+                        <!-- 17. MT5 Bot -->
+                        <a href="https://github.com/samanbalahang/mt5" target="_blank" rel="noopener noreferrer"
+                            class="mix trading card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">Trading</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">ربات متا تریدر</h3>
+                                <p class="text-primary text-sm mb-6">
+                                    طراحی و کد نویسی ربات های متا تریدر با الگوهای الفونسو و البروکس و غیره
+                                </p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">MQL5</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">Trading</span>
+                            </div>
+                        </a>
+
+                        <!-- 18. Python Trading Bot -->
+                        <a href="https://github.com/samanbalahang/tradingBot" target="_blank" rel="noopener noreferrer"
+                            class="mix trading card group relative bg-semitrans border border-primary p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] flex flex-col justify-between cursor-pointer animation-content">
+                            <div
+                                class="absolute inset-0 rounded-3xl bg-linear-to-r from-hover/10 to-sky-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="text-xs font-semibold px-3 py-1 rounded-full border border-primary bg-blue text-primary">Trading</span>
+                                    <span
+                                        class="text-zinc-500 group-hover:text-primary transition-colors duration-300">↗</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">ربات ترید پایتون</h3>
+                                <p class="text-primary text-sm mb-6">
+                                    ربات های ترید برپایه خواندن اطلاعات از اسکرپینگ سایت تریدینگ ویو و معامله براساس الگوهای شکست قیمت
+                                </p>
+                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-primary">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">Python</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue text-primary">APIs</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+            <div id="stars-container">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
             </div>
-        </section>
-
-        <!-- SKILLS & TOOLS SECTION -->
-        <section id="skills" class="py-20 px-6 md:px-12 lg:px-20 bg-[#0c0503] text-white">
-            <div class="max-w-5xl mx-auto">
-                <div
-                    class="flex items-center gap-2 text-[#ff8a5b] text-xs font-semibold tracking-widest uppercase mb-3">
-                    <span>&lt;/&gt;</span>
-                    <span class="typing">
-                        ابزارهایی که برای کد نویسی استفاده میکنم
-                    </span>
-                </div>
-
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10 text-white">
-                    مهارت‌ها و ابزارها
-                </h2>
-
-                <!-- Skills Badges Grid / Flex -->
-                <div class="flex flex-wrap gap-3">
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Python</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Django</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">PHP</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Laravel</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Next.js</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">React</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">WordPress</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">TypeScript</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Tailwind
-                        CSS</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">HTML/CSS/JS</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">MetaTrader
-                        5</span>
-                    <span
-                        class="px-5 py-2.5 rounded-full border border-[#2a1612] bg-[#140806] text-zinc-300 text-sm font-medium hover:border-[#ff8a5b] transition-colors duration-300">Trading
-                        Bots</span>
-                </div>
-            </div>
-        </section>
-        <section id="projects" class="bg-[#0c0503] text-white">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-24 bg-[#0c0503] text-white">
-                <div class="mb-12 animation-content">
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-white">برخی از پروژه های من</h2>
-                    <p class="text-zinc-400 text-base md:text-lg">مجموعه ایی از قالب ها، ربات ها و سایت هایی که طراحی کرده‌ام</p>
-                </div>
-
-                <!-- Filter Buttons -->
-                <div class="flex flex-wrap gap-2 mb-12">
-                    <button
-                        class="px-5 py-2.5 rounded-full text-sm font-medium bg-[#ff8a5b] text-black transition-all duration-300"
-                        data-filter="all">All</button>
-                    <button
-                        class="px-5 py-2.5 rounded-full text-sm font-medium border border-[#2a1612] bg-[#140806] text-zinc-300 hover:border-[#ff8a5b] transition-all duration-300"
-                        data-filter=".wordpress">WordPress</button>
-                    <button
-                        class="px-5 py-2.5 rounded-full text-sm font-medium border border-[#2a1612] bg-[#140806] text-zinc-300 hover:border-[#ff8a5b] transition-all duration-300"
-                        data-filter=".frontend">HTML/CSS/JS</button>
-                    <button
-                        class="px-5 py-2.5 rounded-full text-sm font-medium border border-[#2a1612] bg-[#140806] text-zinc-300 hover:border-[#ff8a5b] transition-all duration-300"
-                        data-filter=".django">Python/Django</button>
-                    <button
-                        class="px-5 py-2.5 rounded-full text-sm font-medium border border-[#2a1612] bg-[#140806] text-zinc-300 hover:border-[#ff8a5b] transition-all duration-300"
-                        data-filter=".trading">Trading</button>
-                </div>
-
-                <!-- Grid of Projects with Clickable Cards Opening in New Tab -->
-                <div id="grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                    <!-- 1. Dining Theme -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/dining-theme/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Dining Theme</h3>
-                            <p class="text-zinc-400 text-sm mb-6">Restaurant WordPress theme demo built in HTML.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML</span>
-                        </div>
-                    </a>
-
-                    <!-- 2. AMIRI School -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/AMIRI/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">AMIRI School</h3>
-                            <p class="text-zinc-400 text-sm mb-6">School-based WordPress theme.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
-                        </div>
-                    </a>
-
-                    <!-- 3. Zibo -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/zibo/" target="_blank" rel="noopener noreferrer"
-                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Zibo</h3>
-                            <p class="text-zinc-400 text-sm mb-6">WordPress theme.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
-                        </div>
-                    </a>
-
-                    <!-- 4. Branding Site -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/branding/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Branding Site</h3>
-                            <p class="text-zinc-400 text-sm mb-6">Branding website built with WordPress.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
-                        </div>
-                    </a>
-
-                    <!-- 5. ElyaWP -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/elyaWp/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">ElyaWP</h3>
-                            <p class="text-zinc-400 text-sm mb-6">Sample WordPress website.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
-                        </div>
-                    </a>
-
-                    <!-- 6. Banta Shop -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/banta/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Banta Shop</h3>
-                            <p class="text-zinc-400 text-sm mb-6">E-commerce shop built with WordPress.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Shop</span>
-                        </div>
-                    </a>
-
-                    <!-- 7. Katibeh -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/katibeh/" target="_blank" rel="noopener noreferrer"
-                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Katibeh</h3>
-                            <p class="text-zinc-400 text-sm mb-6">WordPress theme for branding company.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Branding</span>
-                        </div>
-                    </a>
-
-                    <!-- 8. Katibeh Tahrir -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/katibehTahrir/" target="_blank" rel="noopener noreferrer"
-                        class="mix wordpress card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">WordPress</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Katibeh Tahrir</h3>
-                            <p class="text-zinc-400 text-sm mb-6">Stationery store by WordPress.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">WordPress</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Store</span>
-                        </div>
-                    </a>
-
-                    <!-- 9. Admin Panel -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/wordpresshtmladminpanel/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Admin Panel</h3>
-                            <p class="text-zinc-400 text-sm mb-6">HTML, CSS, JS admin panel.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">CSS</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">JS</span>
-                        </div>
-                    </a>
-
-                    <!-- 10. Phonix -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/phonix/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Phonix</h3>
-                            <p class="text-zinc-400 text-sm mb-6">A sample web theme html, css, js.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">CSS</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">JS</span>
-                        </div>
-                    </a>
-
-                    <!-- 11. HTML Shop -->
-                    <a href="https://گیت هاب.com/سامان بالاهنگ/html-shop" target="_blank" rel="noopener noreferrer"
-                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">HTML Shop</h3>
-                            <p class="text-zinc-400 text-sm mb-6">A shop with html, css, js.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Shop</span>
-                        </div>
-                    </a>
-
-                    <!-- 12. Calculator -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/calculator/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Calculator</h3>
-                            <p class="text-zinc-400 text-sm mb-6">A calculator by html, css, js.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">JS</span>
-                        </div>
-                    </a>
-
-                    <!-- 13. Simple Shop UI -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/simple-shop-ui/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Simple Shop UI</h3>
-                            <p class="text-zinc-400 text-sm mb-6">Simple shop with html css and js.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">UI</span>
-                        </div>
-                    </a>
-
-                    <!-- 14. Kadous Travel -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/kadous/index.html" target="_blank"
-                        rel="noopener noreferrer"
-                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Kadous Travel</h3>
-                            <p class="text-zinc-400 text-sm mb-6">An traveling agency html, css, js theme.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">HTML/CSS</span>
-                        </div>
-                    </a>
-
-                    <!-- 15. Particle JS -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/particlePurejs/" target="_blank" rel="noopener noreferrer"
-                        class="mix frontend card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">HTML/CSS/JS</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Particle JS</h3>
-                            <p class="text-zinc-400 text-sm mb-6">An js effect.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">JavaScript</span>
-                        </div>
-                    </a>
-
-                    <!-- 16. Hadad Django -->
-                    <a href="https://سامان بالاهنگ.گیت هاب.io/hadad/" target="_blank" rel="noopener noreferrer"
-                        class="mix django card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">Python/Django</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Hadad Django</h3>
-                            <p class="text-zinc-400 text-sm mb-6">A django web site.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Python</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Django</span>
-                        </div>
-                    </a>
-
-                    <!-- 17. MT5 Bot -->
-                    <a href="https://گیت هاب.com/سامان بالاهنگ/mt5" target="_blank" rel="noopener noreferrer"
-                        class="mix trading card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">Trading</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">MT5 Bot</h3>
-                            <p class="text-zinc-400 text-sm mb-6">Trading bots for metatrader 5.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">MQL5</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Trading</span>
-                        </div>
-                    </a>
-
-                    <!-- 18. Python Trading Bot -->
-                    <a href="https://گیت هاب.com/سامان بالاهنگ/tradingBot" target="_blank" rel="noopener noreferrer"
-                        class="mix trading card group relative bg-[#140806] border border-[#2a1612] p-7 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] flex flex-col justify-between cursor-pointer animation-content">
-                        <div
-                            class="absolute inset-0 rounded-3xl bg-linear-to-r from-[#ff8a5b]/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-4">
-                                <span
-                                    class="text-xs font-semibold px-3 py-1 rounded-full border border-[#2a1612] bg-[#0c0503] text-[#ff8a5b]">Trading</span>
-                                <span
-                                    class="text-zinc-500 group-hover:text-[#ff8a5b] transition-colors duration-300">↗</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Python Trading Bot</h3>
-                            <p class="text-zinc-400 text-sm mb-6">Python base trading bots.</p>
-                        </div>
-                        <div class="relative z-10 flex flex-wrap gap-2 pt-4 border-t border-[#2a1612]">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">Python</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-[#0c0503] text-zinc-400">APIs</span>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
-    <footer id="contact" class="bg-[#0c0503] text-white pt-24 pb-12 px-6 md:px-12 lg:px-20 border-t border-[#2a1612]">
+    <footer id="contact" class="bg-blue text-white pt-24 pb-12 px-6 md:px-12 lg:px-20 border-t border-primary">
         <div class="max-w-5xl mx-auto text-center">
             <!-- Heading -->
             <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-4 text-white">
-                <span class="typing-slow">باهم </span><span class="text-[#ff8a5b]">یک پروژه حرفه‌ایی خواهیم ساخت</span>
+                <span class="typing-slow">
+                    باهم یک پروژه
+                </span>
+                <span class="text-primary">
+                    حرفه‌ایی خواهیم ساخت
+                </span>
             </h2>
 
-            <p class="text-zinc-400 text-base md:text-lg max-w-xl mx-auto mb-16 leading-relaxed">
+            <p class="text-primary text-base md:text-lg max-w-xl mx-auto mb-16 leading-relaxed">
                 ایده‌ای برای پروژه بعدی‌تان دارید؟
                 از طراحی وب‌سایت و قالب وردپرس گرفته تا توسعه پروژه‌های اختصاصی با Django، Laravel یا ربات‌های معاملاتی،
                 آماده همکاری با شما هستم.
@@ -707,33 +780,41 @@
             <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-20">
                 <!-- تلفن Card -->
                 <a href="tel:09224194485"
-                    class="group bg-[#140806] border border-[#2a1612] p-6 rounded-3xl flex items-center gap-5 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] transition-all duration-300">
+                    class="group bg-semitrans border border-primary p-6 rounded-3xl flex items-center gap-5 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] transition-all duration-300">
                     <div
-                        class="w-12 h-12 rounded-2xl bg-[#ff8a5b] text-black flex items-center justify-center font-bold shrink-0">
-                        📞
+                        class="w-12 h-12 rounded-2xl bg-primary text-black flex items-center justify-center font-bold shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px"
+                            class="fill-trans">
+                            <path
+                                d="M19.51,10.9q-0.03-2.86-2.03-4.87Q15.48,4.02 12.61,4V1.72q1.9,0.01 3.55,0.73t2.9,1.97q1.25,1.25 1.97,2.91t0.73,3.57H19.51Zm-4.35,0q-0.03-1.07-0.75-1.81t-1.8-0.76V6.07q2,0.02 3.4,1.43t1.43,3.4H15.16Zm4.61,10.7q-3.15,0-6.26-1.39t-5.7-3.98q-2.6-2.58-3.99-5.69Q2.43,7.41 2.43,4.25q0-0.79 0.52-1.32T4.25,2.4H8.1q0.93,0 1.48,0.43t0.77,1.29L10.98,7q0.15,0.71-0.02,1.26T10.3,9.23l-2.51,2.2q0.41,0.65 0.93,1.3t1.22,1.34q0.63,0.63 1.22,1.11t1.19,0.85l2.55-2.45q0.49-0.46 1.03-0.6t1.23,0l2.7,0.6q0.88,0.24 1.31,0.77t0.44,1.38v4.03q0,0.79-0.53,1.32T19.78,21.6ZM6.31,8.73L7.94,7.3L7.55,5.43H5.51Q5.56,6.25 5.76,7.09T6.31,8.73Zm8.8,8.83q0.81,0.35 1.69,0.57t1.77,0.35V16.4l-1.8-0.44l-1.66,1.59ZM6.31,8.73Zm8.8,8.83Z" />
+                        </svg>
                     </div>
                     <div class="text-right">
+                        <span class="text-xs text-white font-semibold tracking-wider uppercase block mb-1">تلفن</span>
                         <span
-                            class="text-xs text-white font-semibold tracking-wider uppercase block mb-1">تلفن</span>
-                        <span
-                            class="text-white font-bold text-lg group-hover:text-[#ff8a5b] transition-colors duration-300" dir="ltr">+98
+                            class="text-white font-bold text-lg group-hover:text-primary transition-colors duration-300"
+                            dir="ltr">+98
                             0922
                             419 4485</span>
                     </div>
                 </a>
 
                 <!-- گیت هاب Card -->
-                <a href="https://گیت هاب.com/سامان بالاهنگ?tab=repositories" target="_blank" rel="noopener noreferrer"
-                    class="group bg-[#140806] border border-[#2a1612] p-6 rounded-3xl flex items-center gap-5 hover:border-[#ff8a5b]/60 hover:shadow-[0_10px_30px_rgba(255,138,91,0.15)] transition-all duration-300">
+                <a href="https://github.com/samanbalahang?tab=repositories" target="_blank" rel="noopener noreferrer"
+                    class="group bg-semitrans border border-primary p-6 rounded-3xl flex items-center gap-5 hover:border-primary/60 hover:shadow-[0_20px_50px_rgba(0,212,255,0.12)] transition-all duration-300">
                     <div
-                        class="w-12 h-12 rounded-2xl bg-[#ff8a5b] text-black flex items-center justify-center font-bold shrink-0">
-                        💻
+                        class="w-12 h-12 rounded-2xl bg-primary text-black flex items-center justify-center font-bold shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px"
+                            class="fill-trans">
+                            <path
+                                d="M2.13,19.63q-0.67,0-1.15-0.48T0.5,18H4.31q-0.76,0-1.28-0.52T2.5,16.19V5.31q0-0.76 0.52-1.28T4.31,3.5H19.69q0.76,0 1.28,0.52T21.5,5.31V16.19q0,0.76-0.52,1.28T19.69,18H23.5q0,0.67-0.48,1.15t-1.15,0.48H2.13Zm10.44-0.98q0.23-0.23 0.23-0.57T12.57,17.5T12,17.27T11.43,17.5t-0.23,0.57t0.23,0.57T12,18.88t0.57-0.23ZM4.31,16.5H19.69q0.12,0 0.21-0.1T20,16.19V5.31q0-0.12-0.1-0.21T19.69,5H4.31Q4.19,5 4.1,5.1T4,5.31V16.19q0,0.12 0.1,0.21t0.21,0.1ZM4,16.5q0,0 0-0.1t0-0.21V5.31Q4,5.19 4,5.1T4,5Q4,5 4,5.1T4,5.31V16.19q0,0.12 0,0.21t0,0.1Z" />
+                        </svg>
                     </div>
                     <div class="text-right">
                         <span class="text-xs text-white font-semibold tracking-wider uppercase block mb-1">گیت
                             هاب</span>
                         <span
-                            class="text-white font-bold text-lg group-hover:text-[#ff8a5b] transition-colors duration-300 scale-it">سامان
+                            class="text-white font-bold text-lg group-hover:text-primary transition-colors duration-300 scale-it">سامان
                             بالاهنگ</span>
                     </div>
                 </a>
@@ -741,11 +822,8 @@
 
             <!-- Bottom Copyright and Location Bar -->
             <div
-                class="pt-8 border-t border-[#2a1612] flex flex-col sm:flex-row items-center justify-between text-sm text-zinc-500 gap-4">
+                class="pt-8 border-t border-primary flex flex-col sm:flex-row items-center justify-between text-sm text-zinc-500 gap-4">
                 <p>سامان بالاهنگ. کلیه حقوق محفوظ است.</p>
-                <div class="flex items-center gap-2">
-                    <span>✉ از ایران</span>
-                </div>
             </div>
         </div>
     </footer>
