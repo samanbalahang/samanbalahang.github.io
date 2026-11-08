@@ -122,6 +122,30 @@ window.addEventListener("DOMContentLoaded", () => {
 
     overlay.addEventListener("click", () => menuBtn.click());
 
+    // Language dropdown: open/close on tap or click (hover alone doesn't work on touch screens)
+    const langGroup = document.querySelector("#header .group");
+    if (langGroup) {
+        const langBtn = langGroup.querySelector(":scope > button");
+        langBtn.setAttribute("aria-haspopup", "true");
+        langBtn.setAttribute("aria-expanded", "false");
+        const setLang = (open) => {
+            langGroup.classList.toggle("lang-open", open);
+            langBtn.setAttribute("aria-expanded", String(open));
+        };
+        langBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            setLang(!langGroup.classList.contains("lang-open"));
+        });
+        document.addEventListener("click", (e) => {
+            if (!langGroup.contains(e.target)) setLang(false);
+        });
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") setLang(false);
+        });
+        // opening the mobile menu closes the language dropdown
+        menuBtn.addEventListener("click", () => setLang(false));
+    }
+
     gsap.utils.toArray(".typing").forEach((element) => {
 
         const word = element.textContent;

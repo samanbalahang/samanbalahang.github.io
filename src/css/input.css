@@ -228,20 +228,6 @@ img {
 }
 
 /* star */
-#stars-container {
-  position: absolute;
-  top:0;
-  right: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background: radial-gradient(ellipse at bottom,#0a0b14 0%, #0e0f17 100%);
-  overflow: hidden;
-  -webkit-transform: translate(-50, -50%);
-  -ms-transform: translate(-50, -50%);
-  -o-transform: translate(-50, -50%);
-  transform: translate(-50, -50%);
-}
 
 #stars {
   width: 1px;
@@ -401,4 +387,112 @@ img {
     bottom: auto;
     margin: 0;
     background: transparent;
+}
+
+/* ===== Mobile header fix =====
+   1) backdrop-filter on #header turned it into the containing block for the
+      position:fixed #menu drawer, so the drawer was sized/positioned against the
+      header (off-screen to the right) and caused scrolling. The blur now lives
+      on a pseudo-element so the drawer is fixed to the real viewport again.
+   2) Logo + language button + hamburger were wider than a phone screen; the
+      logo text now shrinks/ellipsizes and the spacing is tighter below lg.
+*/
+html {
+  overflow-x: clip;
+}
+#header {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background-color: transparent;
+  max-width: 100vw;
+}
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(255 255 255 / 0.7);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+#header > div {
+  min-width: 0;
+  gap: 0.75rem;
+}
+#header > div > a:first-child {
+  min-width: 0;
+  flex: 0 1 auto;
+}
+#header > div > a:first-child > div:first-child {
+  flex-shrink: 0;
+}
+#header > div > a:first-child > div:last-child {
+  min-width: 0;
+}
+#header > div > a:first-child h2,
+#header > div > a:first-child span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#header > div > div:last-child {
+  flex-shrink: 0;
+}
+@media (max-width: 63.99rem) {
+  #header > div {
+    padding-inline: 1rem;
+  }
+  #header > div > div:last-child {
+    gap: 0.5rem;
+  }
+  #header > div > div:last-child button:not(#menuBtn) {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+
+
+/* ===== About / starry background fix =====
+   Content that is animated in from the side (translate/x offsets) was wider than
+   the screen for a moment. On phones that widens the whole page, so the 100%-wide
+   star background stops at the old screen width and the rest shows white.
+   Clipping sideways overflow on the page and on the star wrapper keeps the width
+   fixed. isolation keeps the z-index:-1 star layer inside the wrapper.
+   (overflow-x: clip, not hidden, so no extra scroll container is created and
+   GSAP ScrollTrigger keeps working.) */
+html,
+body {
+  overflow-x: clip;
+}
+main {
+  overflow-x: clip;
+}
+main > div.relative {
+  overflow-x: clip;
+  isolation: isolate;
+}
+
+/* ===== Star sky: keep it exactly inside <div class="relative w-full"> =====
+   The sky is absolutely positioned against that wrapper (inset: 0). These rules
+   make sure nothing painted by the animated stars can leak outside its box
+   (some browsers, notably Safari, ignore overflow:hidden for 3D-animated
+   children), and that the layer stays behind the sections inside the wrapper. */
+#stars-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  contain: paint;
+  clip-path: inset(0);
+  pointer-events: none;
+}
+
+
+/* ===== Language dropdown: open by tap/click (class set by portfolio.js) ===== */
+#header .group.lang-open > div {
+  opacity: 1;
+  visibility: visible;
 }
